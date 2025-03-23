@@ -32,7 +32,8 @@ public class GroceryFormatter {
                     writer.write(String.format("%d %s %s %.2f%n", id, item, quantity, price));
 
                 } catch (Exception e) {
-                    System.err.println("处理第 " + id + " 行时出错: " + e.getMessage());
+                    String id = null;
+                                        System.err.println("处理第 " + id + " 行时出错: " + e.getMessage()); // ✅ id已声明
                     continue;
                 }
             }
